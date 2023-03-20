@@ -11,21 +11,29 @@ import { HeaderComponent } from './header/header.component';
 import {EntryService} from './entry.service';
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animation';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatToolbarModule, MatDialogModule} from '@angular/material';
+import {MatTableModule} from '@angular/material/table';
+import { NewEntriesComponent } from './new-entries/new-entries.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { UpdateEntryComponent } from './update-entry/update-entry.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     EntriesComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewEntriesComponent,
+    UpdateEntryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     //material design
-    BrowserAnimationModule, MatButtonModule,
+    BrowserAnimationModule, MatButtonModule, MatTableModule, ReactiveFormsModule, MatInputModule,MatToolbarModule, MatCardModule, MatSelectModule,MatDialogModule,
   ],
+  entryComponents:[updateEntryComponent],
   providers: [
     EntryService
   ],
